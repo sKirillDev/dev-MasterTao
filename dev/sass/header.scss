@@ -1,0 +1,14 @@
+.navbar {
+    padding: 37px 0 27px;
+}
+
+.navbar-nav {
+    max-width: 618px;
+}
+
+.nav-link {
+    color: $color;
+    &:hover {
+        color: $primary-color;
+    }
+}
