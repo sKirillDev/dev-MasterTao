@@ -1,10 +1,11 @@
 const btnBurger = document.querySelector('.hamburger')
 btnBurger.addEventListener('click', ()=> btnBurger.classList.toggle('is-active'))
 
-const swiper = new Swiper('.swiper', {
+const swiperBanner = new Swiper('.swiper-banner', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
+  spaceBetween: 24,
 
   // If we need pagination
   pagination: {

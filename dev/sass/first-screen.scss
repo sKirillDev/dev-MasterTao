@@ -1,4 +1,59 @@
-.swiper {
-  width: 600px;
-  height: 300px;
+.swiper-banner {
+    width: 100%;
+    max-width: 1820px;
+
+    .swiper-slide {
+        min-height: 700px;
+        background-color: $bg-color-accent;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 20px;
+
+        .container {
+            padding-top: 163px;
+            padding-bottom: 73px;
+        }
+    }
+
+
+    .swiper-pagination-bullet {
+        border: 2px solid #fff;
+        border-radius: 90px;
+        width: 8px;
+        height: 8px;
+        background: transparent;
+        opacity: 1;
+
+        &-active {
+            background-color: #fff;
+        }
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 13px);
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        top: calc(100% - 59px);
+    }
+}
+
+.banner-title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.26;
+    text-transform: uppercase;
+    max-width: 515px;
+    margin-bottom: 8px;
+}
+
+.banner-description {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.36;
+    max-width: 320px;
+    margin-bottom: 37px;
 }
