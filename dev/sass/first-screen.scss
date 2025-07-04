@@ -39,6 +39,31 @@
     .swiper-pagination-bullets.swiper-pagination-horizontal {
         top: calc(100% - 59px);
     }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: #fff;
+        position: static;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+    .swiper-button-arows {
+        --padding: 36px;
+        position: absolute;
+        height: 42px;
+        width: 100%;
+        max-width: calc(1522 + var(--padding) * 2);
+        padding: 0 var(--padding);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .banner-title {
@@ -46,7 +71,7 @@
     font-size: 56px;
     line-height: 1.26;
     text-transform: uppercase;
-    max-width: 515px;
+    max-width: 470px;
     margin-bottom: 8px;
 }
 
