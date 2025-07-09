@@ -17,15 +17,12 @@ const swiperBanner = new Swiper('.swiper-banner', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
-  },
-
-  // Responsive breakpoints
-  breakpoints: {
-    992: {
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      }
-    },
   }
 });
+
+const header = document.querySelector('header');
+const banner = document.querySelector('.swiper-banner');
+const headerHeight = header.offsetHeight;
+
+banner.setAttribute('style', '--header-height:'+ headerHeight + 'px' );
+console.log(header.offsetHeight);
