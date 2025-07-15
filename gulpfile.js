@@ -6,7 +6,7 @@ const dirs = {
 
 // Определим необходимые инструменты
 const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
+const gulpSass = require('gulp-sass')(require('sass'));
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
@@ -31,19 +31,20 @@ const merge = require('merge-stream');
 const buffer = require('vinyl-buffer');
 
 // ЗАДАЧА: Компиляция препроцессора
-gulp.task('sass', function(){
-    return gulp.src(dirs.source + '/style.scss') // какой файл компилировать (путь из константы)
+gulp.task('sass', function () {
+  return gulp.src(dirs.source + '/style.scss')
     .pipe(include())
     .pipe(plumber({ errorHandler: onError }))
-    .pipe(sourcemaps.init()) // инициируем карту кода
-    .pipe(sass()) // компилируем
-    .pipe(sourcemaps.write('/')) // записываем карту кода как отдельный файл (путь из константы)
-    .pipe(gulp.dest(dirs.build + '/')) // записываем CSS-файл (путь из константы)
+    .pipe(sourcemaps.init())
+    .pipe(gulpSass.sync().on('error', gulpSass.logError))
+    .pipe(sourcemaps.write('/'))
+    .pipe(gulp.dest(dirs.build + '/'))
     .pipe(browserSync.stream())
-    .pipe(rename('style.min.css')) // переименовываем
-    .pipe(cleanCSS()) // сжимаем
-    .pipe(gulp.dest(dirs.build + '/')); // записываем CSS-файл (путь из константы)
+    .pipe(rename('style.min.css'))
+    .pipe(cleanCSS())
+    .pipe(gulp.dest(dirs.build + '/'));
 });
+
 
 // ЗАДАЧА: Сборка HTML
 gulp.task('html', function() {
