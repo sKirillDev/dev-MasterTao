@@ -1,3 +1,5 @@
+@use 'variables' as variables;
+
 .logo {
     max-width: 172px;
 }
@@ -11,10 +13,10 @@
 }
 
 .nav-link {
-    color: $color;
+    color: variables.$color;
 
     &:hover {
-        color: $primary-color;
+        color: variables.$primary-color;
     }
 }
 
