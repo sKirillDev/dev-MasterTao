@@ -1,11 +1,17 @@
+@use 'variables' as variables;
+
 html {
     font-size: 16px;
 }
 
 body {
     font-family: "ProximaNova";
-    background-color: $bg-color;
-    color: $color;
+    background-color: variables.$bg-color;
+    color: variables.$color;
+}
+
+section {
+    margin-bottom: 100px;
 }
 
 .fw-300 {
@@ -68,14 +74,14 @@ h6 {
 .btn {
     font-size: 15px;
     border-radius: 90px;
-    background-color: $primary-color;
-    border-color: $primary-color;
-    color: $color;
+    background-color: variables.$primary-color;
+    border-color: variables.$primary-color;
+    color: variables.$color;
     padding: 12px 27px;
 
     &:hover {
         background-color: transparent;
-        border-color: $primary-color;
+        border-color: variables.$primary-color;
     }
 
     &.btn-sm {
@@ -95,7 +101,7 @@ h6 {
         background-color: transparent;
 
         &:hover {
-            background-color: $primary-color;
+            background-color: variables.$primary-color;
         }
     }
 }
@@ -114,7 +120,7 @@ h6 {
             position: absolute;
             width: 85px;
             height: 2px;
-            background-color: $primary-color;
+            background-color: variables.$primary-color;
             bottom: 55px;
             left: 50%;
             transform: translateX(-50%);
