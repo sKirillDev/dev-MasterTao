@@ -27,11 +27,6 @@ const headerHeight = header.offsetHeight;
 banner.setAttribute('style', '--header-height:'+ headerHeight + 'px' );
 console.log(header.offsetHeight);
 
-
-
-const fileInput = document.querySelector('#calculation-file');
-const fileName = document.querySelector('#file-name')
-
 fileInput.addEventListener('change', () => {
    fileName.innerHTML = fileInput.files[0].name;
 });

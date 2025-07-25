@@ -1,4 +1,4 @@
-@use '../variables' as variables;
+@use '../variables'as variables;
 
 @media screen and (max-width: 991.98px) {
     .logo {
@@ -32,6 +32,11 @@
     .nav-link {
         font-size: 24px;
         line-height: 222%;
+    }
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .swiper-banner {
@@ -71,5 +76,13 @@
         &:after {
             display: none;
         }
+    }
+
+    .calculation-img {
+        display: none;
+    }
+
+    .input-box_checkbox:first-child {
+        margin-top: 6px;
     }
 }
