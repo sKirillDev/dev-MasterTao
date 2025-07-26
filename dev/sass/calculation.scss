@@ -30,7 +30,7 @@
 }
 
 .form-column {
-    width: calc(50% - 30px);
+    width: calc(50% - 15px);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -55,6 +55,7 @@
 
 input {
     background-color: #fff;
+    color: #282B38;
     font-size: 15px;
     border-radius: 10px;
     padding: 18px 20px;
@@ -156,4 +157,55 @@ input[type='checkbox']:checked+label:before {
     position: absolute;
     bottom: -100px;
     left: 610px;
+}
+
+select {
+    display: none;
+}
+
+.nice-select {
+    color: #282B38;
+    font-size: 15px;
+    width: 100%;
+    height: 55px;
+    border-radius: 10px;
+    line-height: 52px;
+
+    .nice-select-dropdown {
+        overflow-y: hidden;
+        width: 100%;
+    }
+
+    .list {
+        margin-bottom: 0;
+    }
+
+    .option {
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.nice-select .option:hover,
+.nice-select .option.focus,
+.nice-select .option.selected.focus {
+    background-color: #89C249;
+}
+
+.nice-select:after {
+    border-bottom: none;
+    border-right: none;
+    height: 15px;
+    margin-top: -10px;
+    right: 15px;
+    width: 15px;
+    background: url(../assets/img/icon-arrow-bottom.svg) center -2px / 15px no-repeat;
+    transform: rotate(0deg);
+}
+
+.nice-select.open:after {
+    transform: rotate(180deg);
+    margin-top: -14px;
+    right: 20px;
 }

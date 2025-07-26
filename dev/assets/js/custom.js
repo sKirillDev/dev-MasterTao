@@ -1,3 +1,10 @@
+const selects = document.querySelectorAll('select')
+selects.forEach(item => NiceSelect.bind(item))
+
+const searchboxRemove = document.querySelectorAll('.nice-select-search-box')
+searchboxRemove.forEach(el => el.remove())
+
+
 const btnBurger = document.querySelector('.hamburger')
 btnBurger.addEventListener('click', ()=> btnBurger.classList.toggle('is-active'))
 
