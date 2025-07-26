@@ -71,6 +71,106 @@ h6 {
     line-height: 1.26;
 }
 
+select {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    margin-bottom: 6px;
+}
+
+input {
+    background-color: #fff;
+    color: #282B38;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 18px 20px;
+    border: none;
+    transition: .3s;
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 3px 2px #e58d3599;
+    }
+
+    &:focus {
+        box-shadow: 0px 0px 3px 2px #89C24999;
+    }
+
+    &:active {
+        box-shadow: 0px 0px 3px 2px #89C249;
+    }
+
+    &[type="file"] {
+        display: none;
+
+        +label {
+            text-align: center;
+            padding: 12px 12px;
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23fff' stroke-width='2' stroke-dasharray='3%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+
+            background-position: center;
+            background-size: calc(100% - 1px) calc(100% - 1px);
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            margin-bottom: 2px;
+
+            &:hover {
+                background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%2389C24999' stroke-width='2' stroke-dasharray='3%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+            }
+        }
+    }
+
+    &::placeholder {
+        color: #CBCBCB;
+    }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type='checkbox'] {
+    display: none;
+
+    +label {
+        &:hover {
+            &::before {
+                border-color: variables.$primary-color;
+            }
+        }
+    }
+}
+
+input[type='checkbox']+label:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid variables.$bg-color;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+}
+
+input[type='checkbox']:checked+label:before {
+    content: "";
+    background: url(./assets/img/icon-checked.svg) center no-repeat #fff;
+}
+
 .btn {
     font-size: 15px;
     border-radius: 90px;
@@ -159,4 +259,90 @@ h6 {
             }
         }
     }
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px 30px;
+    margin-bottom: 34px;
+
+    &:last-of-type {
+        margin-bottom: 24px;
+    }
+}
+
+.form-column {
+    width: calc(50% - 15px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.input-box_checkbox {
+    padding-left: 32px;
+    padding-top: 2px;
+    margin-bottom: -9px;
+
+    &:first-child {
+        margin-top: 20px;
+    }
+}
+
+.file-name {
+    margin-bottom: 12px;
+}
+
+.nice-select {
+    color: #282B38;
+    font-size: 15px;
+    width: 100%;
+    height: 55px;
+    border-radius: 10px;
+    line-height: 52px;
+
+    .nice-select-dropdown {
+        overflow-y: hidden;
+        width: 100%;
+    }
+
+    .list {
+        margin-bottom: 0;
+    }
+
+    .option {
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.nice-select .option:hover,
+.nice-select .option.focus,
+.nice-select .option.selected.focus {
+    background-color: variables.$secondary-color;
+}
+
+.nice-select:after {
+    border-bottom: none;
+    border-right: none;
+    height: 15px;
+    margin-top: -10px;
+    right: 15px;
+    width: 15px;
+    background: url(../assets/img/icon-arrow-bottom.svg) center -2px / 15px no-repeat;
+    transform: rotate(0deg);
+}
+
+.nice-select.open:after {
+    transform: rotate(180deg);
+    margin-top: -14px;
+    right: 20px;
 }
