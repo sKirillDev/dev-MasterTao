@@ -60,7 +60,7 @@ const swiperAdvantages = new Swiper('#advantages', {
     breakpoints: {
         992: {
             spaceBetween: 0,
-            slidesPerView: advantagesSlideLength,
+            slidesPerView: 'auto',
             slidesPerGroup: advantagesSlideLength,
             loop: false,
             simulateTouch: false,
