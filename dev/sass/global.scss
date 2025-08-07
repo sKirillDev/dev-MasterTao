@@ -255,14 +255,7 @@ input[type='checkbox']:checked+label:before {
         margin-bottom: 7px;
 
         &:after {
-            content: "";
-            position: absolute;
-            width: 85px;
-            height: 2px;
-            background-color: variables.$primary-color;
-            bottom: 55px;
-            left: 50%;
-            transform: translateX(-50%);
+            @include variables.title-line;
         }
     }
 

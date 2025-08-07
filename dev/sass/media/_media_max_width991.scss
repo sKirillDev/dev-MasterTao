@@ -1,6 +1,18 @@
 @use '../variables'as variables;
 
 @media screen and (max-width: 991.98px) {
+    section {
+        margin-bottom: variables.$section-margin-mobile;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .bg-accent {
+        padding: 55px 0 60px;
+    }
+
     .logo {
         max-width: 126px;
     }
@@ -38,6 +50,26 @@
         &:before {
             border-radius: 0;
             inset: 0;
+        }
+
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    .template-title {
+        &.template-title_case-3 {
+            text-align: center;
+            max-width: 100%;
+            padding-bottom: 70px;
+
+            h2 {
+                &::after {
+                    @include variables.title-line;
+                    margin: 0;
+                }
+            }
         }
     }
 
@@ -92,5 +124,10 @@
 
     .input-box_checkbox:first-child {
         margin-top: 6px;
+    }
+
+    .advantage__title {
+        max-width: 218px;
+        margin: 0 auto 40px;
     }
 }

@@ -1,4 +1,4 @@
-@use 'variables' as variables;
+@use 'variables'as variables;
 
 .swiper-banner {
     width: 100%;
@@ -17,25 +17,6 @@
         }
     }
 
-
-    .swiper-pagination-bullet {
-        border: 2px solid #fff;
-        border-radius: 90px;
-        width: 8px;
-        height: 8px;
-        background: transparent;
-        opacity: 1;
-
-        &-active {
-            background-color: #fff;
-        }
-    }
-
-    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-        margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 13px);
-    }
-
     .swiper-horizontal>.swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal {
         top: calc(100% - 59px);
@@ -52,14 +33,14 @@
     }
 
     .swiper-button-arows {
-        --padding: 36px;
+        --padding: 20px;
         position: absolute;
         height: 0px;
         width: 100%;
-        max-width: calc(1522 + var(--padding) * 2);
+        max-width: calc(1503 + var(--padding) * 2);
         padding: 0 var(--padding);
         left: 50%;
-        top: 50%;
+        top: calc(50% - 23px);
         transform: translate(-50%, -50%);
         z-index: 1;
         display: flex;
@@ -82,4 +63,22 @@
     line-height: 1.36;
     max-width: 320px;
     margin-bottom: 37px;
+}
+
+.swiper-pagination-bullet {
+    border: 2px solid #fff;
+    border-radius: 90px;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    opacity: 1;
+
+    &-active {
+        background-color: #fff;
+    }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 13px);
 }

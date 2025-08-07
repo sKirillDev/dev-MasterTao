@@ -1,19 +1,27 @@
 @use 'variables'as variables;
 
+.advantages {
+    .swiper-pagination {
+        position: static;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        top: calc(100% - 59px);
+    }
+}
+
 .advantage {
-    max-width: 263px;
     text-align: center;
 }
 
 .advantage__img-box {
+    @include variables.flex-centered;
     width: 113px;
     height: 113px;
     border: 1px solid #6C7188;
     border-radius: 50%;
     margin: 0 auto 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
 
     &:before {

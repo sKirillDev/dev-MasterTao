@@ -11,3 +11,21 @@ $bg-color-accent: #363A4D;
 $color: #fff;
 
 $section-margin: 100px;
+$section-margin-mobile: 60px;
+
+@mixin title-line {
+    content: "";
+    position: absolute;
+    width: 85px;
+    height: 2px;
+    background-color: $primary-color;
+    bottom: 54px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+@mixin flex-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
