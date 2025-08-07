@@ -15,6 +15,18 @@ section {
     scroll-margin-top: 64px;
 }
 
+section {
+    &:nth-child(even) {
+        .template-title {
+            h2 {
+                &:after {
+                    background-color: variables.$secondary-color;
+                }
+            }
+        }
+    }
+}
+
 .bg-accent {
     position: relative;
     padding: 90px 0 100px;
