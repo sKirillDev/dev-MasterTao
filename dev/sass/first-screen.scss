@@ -26,6 +26,7 @@
     .swiper-button-next {
         color: #fff;
         position: static;
+        margin-top: 0;
 
         &:hover {
             color: variables.$secondary-color;
@@ -37,7 +38,7 @@
         position: absolute;
         height: 0px;
         width: 100%;
-        max-width: calc(1503 + var(--padding) * 2);
+        max-width: calc(1503px + var(--padding) * 2);
         padding: 0 var(--padding);
         left: 50%;
         top: calc(50% - 23px);
