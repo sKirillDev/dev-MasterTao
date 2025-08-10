@@ -1,0 +1,66 @@
+@use 'variables'as variables;
+
+.template-carousel {
+    position: relative;
+
+    .card {
+        margin: 0 auto;
+    }
+
+    .swiper-pagination {
+        position: static;
+        margin-top: 32px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: #6C6F7F;
+    }
+}
+
+.swiper-pagination-bullet {
+    border: 2px solid #ffffff;
+    border-radius: 90px;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    opacity: 1;
+
+    &-active {
+        background-color: #ffffff;
+    }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 13px);
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #ffffff;
+    position: static;
+    margin-top: 0;
+
+    &:hover {
+        color: variables.$secondary-color;
+    }
+}
+
+.swiper-arrow-container {
+    --padding: 20px;
+    position: absolute;
+    height: 0px;
+    width: 100%;
+    max-width: calc(1503 + var(--padding) * 2);
+    padding: 0 var(--padding);
+    left: 50%;
+    top: calc(50% - 23px);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+ 
+    width: calc(100% + 183px);
+}
