@@ -71,6 +71,17 @@
                 }
             }
         }
+
+        &.template-title_case-2 {
+            text-align: center;
+
+            h2 {
+                &::after {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
     }
 
     .container {
@@ -129,5 +140,20 @@
     .advantage__title {
         max-width: 218px;
         margin: 0 auto 40px;
+    }
+
+    .about {
+        .container {
+            flex-direction: column;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+        }
     }
 }
