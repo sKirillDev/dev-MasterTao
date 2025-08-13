@@ -154,6 +154,35 @@
         img {
             height: auto;
             max-width: 100%;
+            display: block;
+            margin: 0 auto;
         }
+    }
+
+    .questions__row {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .questions {
+        .accordion {
+            .accordion-item {
+                .accordion-button {
+                    font-size: 16px;
+                    padding: 12px 22px;
+                    display: flex;
+                    gap: 50px;
+                }
+
+                .accordion-body {
+                    padding: 0px 22px 12px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .questions-form {
+        text-align: center;
     }
 }

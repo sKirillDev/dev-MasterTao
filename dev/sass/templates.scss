@@ -49,18 +49,7 @@
 }
 
 .swiper-arrow-container {
-    --padding: 20px;
-    position: absolute;
-    height: 0px;
-    width: 100%;
-    max-width: calc(1503 + var(--padding) * 2);
-    padding: 0 var(--padding);
-    left: 50%;
-    top: calc(50% - 23px);
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
- 
+    @include variables.swiper-arrow-container;
+
     width: calc(100% + 183px);
 }

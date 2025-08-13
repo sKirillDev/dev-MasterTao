@@ -167,6 +167,14 @@ input {
     }
 }
 
+textarea {
+    @extend input;
+    min-height: 55px;
+    height: 70px;
+    max-height: 150px;
+    overflow: hidden;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

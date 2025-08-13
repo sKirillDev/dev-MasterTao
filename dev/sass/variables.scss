@@ -1,6 +1,6 @@
 ///fonts///
 $font-primary: "Open Sans";
-$font-secondary:  "monospace";
+$font-secondary: "monospace";
 $font-size: 16px;
 
 ///colors///
@@ -22,6 +22,21 @@ $section-margin-mobile: 60px;
     bottom: 54px;
     left: 50%;
     transform: translate(-50%);
+}
+
+@mixin swiper-arrow-container {
+    --padding: 20px;
+    position: absolute;
+    height: 0px;
+    width: 100%;
+    max-width: calc(1503px + var(--padding) * 2);
+    padding: 0 var(--padding);
+    left: 50%;
+    top: calc(50% - 23px);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
 }
 
 @mixin flex-centered {
