@@ -185,4 +185,22 @@
     .questions-form {
         text-align: center;
     }
+
+    .partnership__content {
+        flex-direction: column;
+        gap: 24px;
+
+        &-item {
+            width: 100%;
+            font-size: 16px;
+
+            p {
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    .order-mobile-negative {
+        order: -1;
+    }
 }

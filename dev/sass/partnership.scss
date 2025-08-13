@@ -1,0 +1,25 @@
+.partnership__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 56px;
+}
+
+.partnership__content-item {
+    width: calc(50% - 28px);
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.57;
+
+    p {
+        margin-bottom: 28px;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+}
