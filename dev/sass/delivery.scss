@@ -4,7 +4,7 @@
     border-radius: 20px;
     background-color: variables.$bg-color-accent;
     text-align: center;
-    width: 360px;
+    max-width: 360px;
     border: none;
 
     &__img-box {
@@ -59,6 +59,7 @@
 
         .btn {
             width: 50%;
+            padding: 12px 12px;
         }
     }
 
