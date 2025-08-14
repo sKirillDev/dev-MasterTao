@@ -1,3 +1,80 @@
+@use 'variables'as variables;
 
+.footer {
+    hr {
+        height: 2px;
+        margin: 0 0 40px 0;
+        height: 2px;
+        background-color: #E58D35;
+        opacity: initial;
+    }
 
- 
+    address {
+        margin-bottom: 70px;
+    }
+
+    .footer__row {
+        display: flex;
+        gap: 90px;
+    }
+
+    .footer__column {
+        max-width: 264px;
+        font-size: 16px;
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                margin-bottom: 6px;
+                line-height: 1.6;
+            }
+        }
+
+        h4 {
+            margin-bottom: 14px;
+        }
+
+        &_contacts {
+            ul {
+                li {
+                    margin-bottom: 2px;
+                    font-size: 14px;
+
+                    .email {
+                        text-decoration: underline;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 19px;
+                    }
+                }
+            }
+
+            a {
+                color: #ffffff;
+                text-decoration: none;
+            }
+        }
+    }
+
+    a {
+        color: #85899C;
+        text-decoration-skip-ink: none;
+        text-underline-offset: 2px;
+
+        &:hover {
+            color: variables.$primary-color;
+        }
+    }
+
+    .logo {
+        margin-bottom: 28px;
+    }
+}
+
+.social {
+    display: flex;
+    gap: 8px;
+}

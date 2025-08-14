@@ -203,4 +203,22 @@
     .order-mobile-negative {
         order: -1;
     }
+
+    .footer {
+        .footer__row {
+            justify-content: center;
+
+            .footer__column:not(.footer__column_contacts) {
+                display: none;
+            }
+
+            .footer__column_contacts {
+                text-align: center;
+
+                .social {
+                    justify-content: center;
+                }
+            }
+        }
+    }
 }
