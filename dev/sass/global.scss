@@ -399,3 +399,8 @@ input[type='checkbox']:checked+label:before {
     margin-top: -14px;
     right: 20px;
 }
+
+.delivery, 
+.services {
+    overflow: hidden;
+}
