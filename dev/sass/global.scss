@@ -19,7 +19,7 @@ section {
     &:nth-child(even) {
         .template-title {
             h2 {
-                &:after {
+                &::after {
                     background-color: variables.$secondary-color;
                 }
             }
@@ -49,23 +49,6 @@ section {
         z-index: -1;
     }
 }
-
-.fw-300 {
-    font-weight: 300;
-}
-
-.fw-400 {
-    font-weight: 400;
-}
-
-.fw-600 {
-    font-weight: 600;
-}
-
-.fw-700 {
-    font-weight: 700;
-}
-
 
 h1,
 h2,
@@ -185,6 +168,7 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
     -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 input[type='checkbox'] {
@@ -275,7 +259,7 @@ input[type='checkbox']:checked+label:before {
         text-transform: uppercase;
         margin-bottom: 7px;
 
-        &:after {
+        &::after {
             @include variables.title-line;
         }
     }
@@ -292,7 +276,7 @@ input[type='checkbox']:checked+label:before {
         transform: translateX(0);
 
         h2 {
-            &:after {
+            &::after {
                 left: 0;
                 transform: translateX(0);
             }
@@ -304,7 +288,7 @@ input[type='checkbox']:checked+label:before {
         text-align: left;
 
         h2 {
-            &:after {
+            &::after {
                 position: static;
                 display: inline-block;
                 transform: translateX(0);
@@ -383,24 +367,30 @@ input[type='checkbox']:checked+label:before {
     background-color: variables.$secondary-color;
 }
 
-.nice-select:after {
-    border-bottom: none;
-    border-right: none;
-    height: 15px;
-    margin-top: -10px;
-    right: 15px;
-    width: 15px;
-    background: url(./assets/img/icon-arrow-bottom.svg) center -2px / 15px no-repeat;
-    transform: rotate(0deg);
+.nice-select {
+    :after {
+        border-bottom: none;
+        border-right: none;
+        height: 15px;
+        margin-top: -10px;
+        right: 15px;
+        width: 15px;
+        background: url(./assets/img/icon-arrow-bottom.svg) center -2px / 15px no-repeat;
+        transform: rotate(0deg);
+    }
 }
 
-.nice-select.open:after {
-    transform: rotate(180deg);
-    margin-top: -14px;
-    right: 20px;
+.nice-select {
+    &.open {
+        &::after {
+            transform: rotate(180deg);
+            margin-top: -14px;
+            right: 20px;
+        }
+    }
 }
 
-.delivery, 
+.delivery,
 .services {
     overflow: hidden;
 }

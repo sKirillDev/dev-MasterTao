@@ -2,10 +2,12 @@
     .calculation-form {
         padding: 52px 30px 34px;
 
-        .btn.btn-lg {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
+        .btn {
+            &.btn-lg {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
         }
     }
 

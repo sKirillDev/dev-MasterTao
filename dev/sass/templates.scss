@@ -50,6 +50,5 @@
 
 .swiper-arrow-container {
     @include variables.swiper-arrow-container;
-
     width: calc(100% + 183px);
 }
